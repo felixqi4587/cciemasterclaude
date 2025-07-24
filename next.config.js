@@ -6,9 +6,11 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     unoptimized: true
   },
-  // Enable static export for backup deployment
+  // Enable static export for Namecheap deployment
+  output: 'export',
   trailingSlash: true,
-  // Optimized for Vercel deployment
+  basePath: '',
+  // Disable features not supported in static export
   experimental: {
     optimizeCss: true
   }
