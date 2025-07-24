@@ -6,14 +6,16 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     unoptimized: true
   },
-  // Enable static export for Namecheap deployment
-  output: 'export',
+  // Optimized for both Vercel and Namecheap Node.js deployment
   trailingSlash: true,
   basePath: '',
-  // Disable features not supported in static export
+  // Compatible with shared hosting environments
   experimental: {
     optimizeCss: true
-  }
+  },
+  // Ensure compatibility with Namecheap Node.js
+  compress: true,
+  poweredByHeader: false
 }
 
 module.exports = nextConfig

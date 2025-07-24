@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint",
-    "export": "next build"
+    "export": "next build",
+    "namecheap": "npm run build && npm start"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.19",
