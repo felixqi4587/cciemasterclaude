@@ -1,0 +1,18 @@
+{
+  "name": "CCIE Master",
+  "short_name": "CCIE Master",
+  "description": "Professional CCIE training with 95% success rate",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/"
+}
