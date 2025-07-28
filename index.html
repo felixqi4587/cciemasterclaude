@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EliteLab - Elite Training, Elite Results, Elite Careers | 97% Success Rate</title>
-    <meta name="description" content="Join EliteLab's elite IT certification training. 3-month intensive programs, $50K+ average salary increase, 97% first-attempt pass rate. CCIE, Cloud, Security, DevOps. Start your elite career transformation today.">
+    <title>CCIE Master - Master Training, Master Results, Master Careers | 97% Success Rate</title>
+    <meta name="description" content="Join CCIE Master's expert IT certification training. 4-month intensive programs, $50K+ average salary increase, 97% first-attempt pass rate. CCIE, Cloud, Security, DevOps. Start your master career transformation today.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="EliteLab - Elite Training, Elite Results, Elite Careers">
-    <meta property="og:description" content="Elite IT certification training with 97% success rate. Join 15,000+ elite professionals earning $150K+ salaries.">
+    <meta property="og:title" content="CCIE Master - Master Training, Master Results, Master Careers">
+    <meta property="og:description" content="Expert IT certification training with 97% success rate. Join 15,000+ master professionals earning $150K+ salaries.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://elitelab.com">
-    <meta property="og:image" content="https://elitelab.com/images/elite-lab-social.jpg">
+    <meta property="og:url" content="https://cciemaster.com">
+    <meta property="og:image" content="https://cciemaster.com/images/ccie-master-social.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +23,7 @@
             theme: {
                 extend: {
                     colors: {
-                        elite: {
+                        master: {
                             50: '#f0f9ff',
                             100: '#e0f2fe',
                             200: '#bae6fd',
@@ -52,7 +52,7 @@
                         }
                     },
                     animation: {
-                        'elite-glow': 'elite-glow 2s ease-in-out infinite alternate',
+                        'master-glow': 'master-glow 2s ease-in-out infinite alternate',
                         'countdown': 'countdown 1s ease-in-out infinite',
                         'slide-up': 'slide-up 0.5s ease-out',
                         'fade-in': 'fade-in 0.6s ease-out',
@@ -69,7 +69,7 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         
-        .elite-gradient { 
+        .master-gradient { 
             background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%); 
         }
         
@@ -77,19 +77,19 @@
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); 
         }
         
-        .glass-elite { 
+        .glass-master { 
             background: rgba(255, 255, 255, 0.1); 
             backdrop-filter: blur(20px); 
             border: 1px solid rgba(255, 255, 255, 0.2); 
         }
         
-        .elite-card {
+        .master-card {
             background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
             box-shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
             border: 1px solid rgba(14, 165, 233, 0.1);
         }
         
-        @keyframes elite-glow {
+        @keyframes master-glow {
             0% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.5); }
             100% { box-shadow: 0 0 40px rgba(14, 165, 233, 0.8), 0 0 60px rgba(14, 165, 233, 0.4); }
         }
@@ -114,7 +114,7 @@
             70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
         }
         
-        .elite-notification {
+        .master-notification {
             animation: slide-up 0.5s ease-out;
         }
         
@@ -141,7 +141,7 @@
             min-height: 200px;
         }
         
-        .elite-badge {
+        .master-badge {
             background: linear-gradient(145deg, #fbbf24, #f59e0b);
             background-clip: text;
             -webkit-background-clip: text;
@@ -153,56 +153,56 @@
 <body class="bg-gray-50">
     <!-- Ultra-Urgent Notification Bar -->
     <div class="fixed top-0 left-0 right-0 z-50 bg-danger-600 text-white text-center py-3 text-sm font-bold animate-countdown">
-        🚨 FLASH SALE: Only 3 Elite Spots Left! Winter Enrollment closes in <span id="flash-countdown" class="text-yellow-300 font-black"></span> ⚡
+        🚨 FLASH SALE: Only 3 Master Spots Left! Winter Enrollment closes in <span id="flash-countdown" class="text-yellow-300 font-black"></span> 🎯
     </div>
 
-    <!-- Elite Progress Bar -->
+    <!-- Master Progress Bar -->
     <div class="fixed top-12 left-0 right-0 z-40">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
 
-    <!-- Floating Elite Notifications -->
-    <div id="elite-notifications" class="fixed bottom-4 left-4 z-50 space-y-2 max-w-sm"></div>
+    <!-- Floating Master Notifications -->
+    <div id="master-notifications" class="fixed bottom-4 left-4 z-50 space-y-2 max-w-sm"></div>
 
     <!-- Floating CTA -->
     <div class="floating-cta md:hidden">
-        <a href="#elite-trial" class="bg-success-600 text-white px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-success flex items-center space-x-2">
-            <span>⚡</span>
-            <span>Join Elite</span>
+        <a href="#master-trial" class="bg-success-600 text-white px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-success flex items-center space-x-2">
+            <span>🎯</span>
+            <span>Join CCIE Master</span>
         </a>
     </div>
 
     <!-- Header -->
-    <header class="fixed top-12 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-lg border-b border-elite-200">
+    <header class="fixed top-12 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-lg border-b border-master-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <div class="flex items-center space-x-2">
-                        <span class="text-3xl">⚡</span>
-                        <span class="text-2xl font-black text-elite-800">Elite</span>
-                        <span class="text-2xl font-light text-elite-600">Lab</span>
+                        <span class="text-3xl">🎯</span>
+                        <span class="text-2xl font-black text-master-800">CCIE</span>
+                        <span class="text-2xl font-light text-master-600">Master</span>
                     </div>
                     <div class="hidden lg:flex items-center space-x-6 ml-8">
                         <div class="flex items-center space-x-1 text-gold-600">
                             <span class="text-sm">⭐⭐⭐⭐⭐</span>
-                            <span class="text-sm font-bold">4.97/5 (3,842 reviews)</span>
+                            <span class="text-sm font-bold">4.9/5 (2,847 reviews)</span>
                         </div>
                         <div class="bg-success-100 text-success-800 px-4 py-1 rounded-full text-sm font-bold">
-                            97% Elite Success Rate
+                            95% Master Success Rate
                         </div>
-                        <div class="bg-elite-100 text-elite-800 px-4 py-1 rounded-full text-sm font-bold">
-                            15,000+ Elite Graduates
+                        <div class="bg-master-100 text-master-800 px-4 py-1 rounded-full text-sm font-bold">
+                            10,000+ Master Graduates
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-3">
-                    <a href="#elite-trial" 
-                       class="bg-gold-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-gold-700 transition-colors animate-elite-glow">
-                        Start Elite Trial
+                    <a href="#master-trial" 
+                       class="bg-gold-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-gold-700 transition-colors animate-master-glow">
+                        Start Free Trial
                     </a>
-                    <a href="https://wa.me/16034861896?text=I want to join EliteLab's elite training program!" 
-                       class="bg-elite-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-elite-700 transition-colors">
-                        Join Elite Now
+                    <a href="https://wa.me/16034861896?text=I want to join CCIE Master's training program!" 
+                       class="bg-master-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-master-700 transition-colors">
+                        Enroll Now
                     </a>
                 </div>
             </div>
@@ -210,7 +210,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="elite-gradient text-white min-h-screen flex items-center pt-32 pb-20 relative overflow-hidden">
+    <section class="master-gradient text-white min-h-screen flex items-center pt-32 pb-20 relative overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute -top-10 -right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -220,51 +220,51 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="text-center lg:text-left animate-fade-in">
-                    <!-- Elite Badge -->
-                    <div class="inline-flex items-center bg-gold-500/20 text-gold-300 px-6 py-3 rounded-full text-sm font-bold mb-6 animate-elite-glow">
-                        🏆 #1 Elite IT Training Platform - Winter 2024
+                    <!-- Master Badge -->
+                    <div class="inline-flex items-center bg-gold-500/20 text-gold-300 px-6 py-3 rounded-full text-sm font-bold mb-6 animate-master-glow">
+                        🏆 #1 IT Certification Training Platform - Winter 2024
                     </div>
                     
                     <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                        <span class="elite-badge">Elite</span>Lab
+                        <span class="master-badge">CCIE</span> Master
                     </h1>
                     
                     <h2 class="text-2xl md:text-4xl font-bold mb-8 leading-tight">
-                        Elite Training • Elite Results • Elite Careers
+                        Master Training • Master Results • Master Careers
                     </h2>
                     
                     <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                        Join the <strong>elite 3%</strong> of IT professionals. Transform your career in 3 months with our exclusive training that delivers <strong>$50K+ salary increases</strong> and <strong>97% first-attempt success</strong>.
+                        Transform your IT career in 4 months with our <strong>exclusive training</strong> that delivers <strong>$45K+ salary increases</strong> and <strong>95% first-attempt success</strong>. Join 10,000+ certified professionals.
                     </p>
 
-                    <!-- Exclusive Stats -->
+                    <!-- Master Stats -->
                     <div class="grid grid-cols-3 gap-6 mb-10">
                         <div class="text-center">
-                            <div class="text-4xl font-black text-gold-300 mb-2">97%</div>
-                            <div class="text-sm font-semibold opacity-80">Elite Pass Rate</div>
+                            <div class="text-4xl font-black text-gold-300 mb-2">95%</div>
+                            <div class="text-sm font-semibold opacity-80">Pass Rate</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-4xl font-black text-green-300 mb-2">$55K</div>
+                            <div class="text-4xl font-black text-green-300 mb-2">$45K</div>
                             <div class="text-sm font-semibold opacity-80">Avg Salary Jump</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-4xl font-black text-blue-300 mb-2">15K+</div>
-                            <div class="text-sm font-semibold opacity-80">Elite Alumni</div>
+                            <div class="text-4xl font-black text-blue-300 mb-2">10K+</div>
+                            <div class="text-sm font-semibold opacity-80">Success Stories</div>
                         </div>
                     </div>
                     
-                    <!-- Elite CTAs -->
+                    <!-- Master CTAs -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                        <a href="#elite-trial" 
-                           class="bg-gold-600 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-gold-700 transition-all animate-elite-glow inline-flex items-center justify-center group">
-                            <span class="mr-3">⚡</span>
-                            <span>Claim Elite Trial</span>
+                        <a href="#master-trial" 
+                           class="bg-gold-600 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-gold-700 transition-all animate-master-glow inline-flex items-center justify-center group">
+                            <span class="mr-3">🚀</span>
+                            <span>Start Free Trial</span>
                             <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
                         </a>
-                        <a href="#elite-programs" 
+                        <a href="#master-programs" 
                            class="bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/30 transition-all inline-flex items-center justify-center">
                             <span class="mr-3">🏆</span>
-                            <span>View Elite Programs</span>
+                            <span>View Programs</span>
                         </a>
                     </div>
 
@@ -272,11 +272,11 @@
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm opacity-80">
                         <div class="flex items-center space-x-2">
                             <span>🔒</span>
-                            <span>100% Elite Guarantee</span>
+                            <span>100% Money-Back Guarantee</span>
                         </div>
                         <div class="flex items-center space-x-2">
                             <span>⚡</span>
-                            <span>24/7 Elite Support</span>
+                            <span>24/7 Expert Support</span>
                         </div>
                         <div class="flex items-center space-x-2">
                             <span>🏆</span>
@@ -285,14 +285,14 @@
                     </div>
                 </div>
 
-                <!-- Elite Success Stories Carousel -->
-                <div class="glass-elite rounded-3xl p-8 animate-slide-up">
+                <!-- Master Success Stories Carousel -->
+                <div class="glass-master rounded-3xl p-8 animate-slide-up">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">Latest Elite Success Stories</h3>
-                        <div class="text-sm opacity-75">Live updates from our elite community</div>
+                        <h3 class="text-2xl font-bold mb-2">Latest Success Stories</h3>
+                        <div class="text-sm opacity-75">Live updates from our community</div>
                     </div>
                     
-                    <div id="elite-carousel" class="testimonial-card mb-6">
+                    <div id="master-carousel" class="testimonial-card mb-6">
                         <!-- Dynamic testimonials will populate here -->
                     </div>
                     
@@ -310,217 +310,370 @@
         </div>
     </section>
 
-    <!-- Elite Certification Badges -->
+    <!-- Master Certification Badges -->
     <section class="py-12 bg-white border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8">
-                <h3 class="text-lg font-bold text-gray-600 mb-4">Trusted by Elite Organizations</h3>
+                <h3 class="text-lg font-bold text-gray-600 mb-4">Trusted by Industry Leaders</h3>
             </div>
             <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
                 <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-elite-600 rounded-full flex items-center justify-center">
+                    <div class="w-8 h-8 bg-master-600 rounded-full flex items-center justify-center">
                         <span class="text-white text-xs font-bold">C</span>
                     </div>
-                    <span class="font-bold">Cisco Elite Partner</span>
+                    <span class="font-bold">Cisco Learning Partner</span>
                 </div>
                 <div class="flex items-center space-x-2">
                     <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
                         <span class="text-white text-xs font-bold">✓</span>
                     </div>
-                    <span class="font-bold">ISO 27001 Elite</span>
+                    <span class="font-bold">ISO 27001 Certified</span>
                 </div>
                 <div class="flex items-center space-x-2">
                     <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
                         <span class="text-white text-xs font-bold">R</span>
                     </div>
-                    <span class="font-bold">Red Hat Elite</span>
+                    <span class="font-bold">Red Hat Authorized</span>
                 </div>
                 <div class="flex items-center space-x-2">
                     <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
                         <span class="text-white text-xs font-bold">A</span>
                     </div>
-                    <span class="font-bold">AWS Elite Partner</span>
+                    <span class="font-bold">AWS Training Partner</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Elite Programs Section -->
-    <section id="elite-programs" class="py-20 bg-gray-50">
+    <!-- Master Programs Section -->
+    <section id="master-programs" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-                    Elite Certification Programs
+                    Professional IT Certifications
                 </h2>
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-                    Join the exclusive 3% who master elite-level IT certifications. Our handpicked programs deliver guaranteed results with our proven 97% success methodology.
+                    Master the most in-demand IT certifications with our proven 95% success methodology and guaranteed results.
                 </p>
                 <div class="inline-flex items-center bg-danger-100 text-danger-800 px-6 py-3 rounded-full text-lg font-bold animate-countdown">
-                    🔥 FLASH SALE: Save up to $2,500 - 3 Hours Remaining!
+                    🔥 FLASH SALE: Save up to $1,500 - 3 Hours Remaining!
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Elite CCIE Program -->
-                <div class="course-card elite-card rounded-3xl p-8 relative overflow-hidden">
+                <!-- CCIE Enterprise -->
+                <div class="course-card master-card rounded-3xl p-8 relative overflow-hidden">
                     <div class="absolute top-4 right-4 bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-black">
-                        ELITE CHOICE
+                        MOST POPULAR
                     </div>
                     <div class="absolute top-4 left-4 bg-danger-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        SAVE $2,500
+                        SAVE $1,500
                     </div>
                     
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-elite-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-master-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <span class="text-white text-2xl font-bold">🏆</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-2">Elite CCIE Master</h3>
-                        <p class="text-gray-600 mb-4">The ultimate elite certification. Average salary: $180K-$250K</p>
+                        <h3 class="text-2xl font-black text-gray-900 mb-2">CCIE Enterprise</h3>
+                        <p class="text-gray-600 mb-4">Expert-level enterprise infrastructure. Average salary: $120K-$180K</p>
                     </div>
                     
                     <div class="text-center mb-6">
-                        <div class="text-4xl font-black text-elite-600 mb-2">$4,997</div>
-                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $7,497</div>
-                        <div class="text-lg text-success-600 font-bold">Elite Savings: $2,500</div>
+                        <div class="text-4xl font-black text-master-600 mb-2">$2,999</div>
+                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $4,499</div>
+                        <div class="text-lg text-success-600 font-bold">You Save: $1,500</div>
                     </div>
                     
                     <div class="space-y-3 text-sm mb-8">
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>97% first-attempt elite success rate</span>
+                            <span>95% first-attempt pass rate</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>100% elite money-back guarantee</span>
+                            <span>100% money-back guarantee</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Real Cisco elite-grade equipment</span>
+                            <span>Real Cisco equipment labs</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>24/7 elite instructor access</span>
+                            <span>24/7 instructor support</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Elite career placement guarantee</span>
+                            <span>Job placement assistance</span>
                         </div>
                     </div>
                     
-                    <a href="#elite-enroll" class="block w-full bg-elite-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-elite-700 transition-all animate-elite-glow">
-                        Join Elite Program
+                    <a href="#master-enroll" class="block w-full bg-master-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-master-700 transition-all animate-master-glow">
+                        Start Training Now
                     </a>
                 </div>
 
-                <!-- Elite Cloud Master -->
-                <div class="course-card elite-card rounded-3xl p-8 relative">
+                <!-- Cloud Certifications -->
+                <div class="course-card master-card rounded-3xl p-8 relative">
                     <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
                         HOT TREND
                     </div>
                     <div class="absolute top-4 left-4 bg-danger-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        SAVE $2,000
+                        SAVE $1,200
                     </div>
                     
                     <div class="text-center mb-6">
                         <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <span class="text-white text-2xl">☁️</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-2">Elite Cloud Master</h3>
-                        <p class="text-gray-600 mb-4">Multi-cloud expertise: AWS, Azure, GCP. Salary: $160K-$220K</p>
+                        <h3 class="text-2xl font-black text-gray-900 mb-2">Cloud Certifications</h3>
+                        <p class="text-gray-600 mb-4">AWS, Azure, GCP professional level. Salary: $130K-$200K</p>
                     </div>
                     
                     <div class="text-center mb-6">
-                        <div class="text-4xl font-black text-blue-600 mb-2">$3,497</div>
-                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $5,497</div>
-                        <div class="text-lg text-success-600 font-bold">Elite Savings: $2,000</div>
+                        <div class="text-4xl font-black text-blue-600 mb-2">$2,299</div>
+                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $3,499</div>
+                        <div class="text-lg text-success-600 font-bold">You Save: $1,200</div>
                     </div>
                     
                     <div class="space-y-3 text-sm mb-8">
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Triple cloud certification path</span>
+                            <span>Multi-cloud certification path</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Real cloud sandbox environments</span>
+                            <span>Real cloud sandbox access</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Elite DevOps integration</span>
+                            <span>DevOps integration training</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Enterprise architecture training</span>
+                            <span>Enterprise architecture focus</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>97% elite success guarantee</span>
+                            <span>95% success guarantee</span>
                         </div>
                     </div>
                     
-                    <a href="#elite-enroll" class="block w-full bg-blue-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all">
-                        Join Elite Program
+                    <a href="#master-enroll" class="block w-full bg-blue-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all">
+                        Start Training Now
                     </a>
                 </div>
 
-                <!-- Elite Security Master -->
-                <div class="course-card elite-card rounded-3xl p-8 relative">
+                <!-- CCIE Security -->
+                <div class="course-card master-card rounded-3xl p-8 relative">
                     <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold">
                         HIGHEST PAID
                     </div>
                     <div class="absolute top-4 left-4 bg-danger-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        SAVE $2,200
+                        SAVE $1,300
                     </div>
                     
                     <div class="text-center mb-6">
                         <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <span class="text-white text-2xl">🛡️</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-2">Elite Security Master</h3>
-                        <p class="text-gray-600 mb-4">Advanced cybersecurity elite training. Salary: $200K-$300K</p>
+                        <h3 class="text-2xl font-black text-gray-900 mb-2">CCIE Security</h3>
+                        <p class="text-gray-600 mb-4">Advanced cybersecurity expertise. Salary: $140K-$220K</p>
                     </div>
                     
                     <div class="text-center mb-6">
-                        <div class="text-4xl font-black text-red-600 mb-2">$5,497</div>
-                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $7,697</div>
-                        <div class="text-lg text-success-600 font-bold">Elite Savings: $2,200</div>
+                        <div class="text-4xl font-black text-red-600 mb-2">$3,499</div>
+                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $4,799</div>
+                        <div class="text-lg text-success-600 font-bold">You Save: $1,300</div>
                     </div>
                     
                     <div class="space-y-3 text-sm mb-8">
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Elite ethical hacking certification</span>
+                            <span>Advanced security protocols</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Zero-trust architecture mastery</span>
+                            <span>Zero-trust architecture</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Real penetration testing labs</span>
+                            <span>Threat analysis & response</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Elite incident response training</span>
+                            <span>Real penetration testing</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-success-600 font-bold">✓</span>
-                            <span>Guaranteed elite placement</span>
+                            <span>Industry placement guarantee</span>
                         </div>
                     </div>
                     
-                    <a href="#elite-enroll" class="block w-full bg-red-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all">
-                        Join Elite Program
+                    <a href="#master-enroll" class="block w-full bg-red-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all">
+                        Start Training Now
+                    </a>
+                </div>
+
+                <!-- Red Hat -->
+                <div class="course-card master-card rounded-3xl p-8 relative">
+                    <div class="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        LINUX EXPERT
+                    </div>
+                    <div class="absolute top-4 left-4 bg-danger-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        SAVE $800
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🐧</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-2">Red Hat Certified</h3>
+                        <p class="text-gray-600 mb-4">Linux system administration expertise. Salary: $90K-$140K</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-4xl font-black text-purple-600 mb-2">$1,999</div>
+                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $2,799</div>
+                        <div class="text-lg text-success-600 font-bold">You Save: $800</div>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm mb-8">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Hands-on Linux labs</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Container technologies</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>OpenShift platform</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Automation with Ansible</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>95% certification success</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#master-enroll" class="block w-full bg-purple-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-purple-700 transition-all">
+                        Start Training Now
+                    </a>
+                </div>
+
+                <!-- Juniper -->
+                <div class="course-card master-card rounded-3xl p-8 relative">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        NETWORK PRO
+                    </div>
+                    <div class="absolute top-4 left-4 bg-danger-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        SAVE $900
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🌐</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-2">Juniper Networks</h3>
+                        <p class="text-gray-600 mb-4">Service provider networking. Salary: $110K-$160K</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-4xl font-black text-green-600 mb-2">$2,499</div>
+                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $3,399</div>
+                        <div class="text-lg text-success-600 font-bold">You Save: $900</div>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm mb-8">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Real Juniper equipment</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>MPLS & BGP mastery</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Service provider focus</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Network automation</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Career advancement path</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#master-enroll" class="block w-full bg-green-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-green-700 transition-all">
+                        Start Training Now
+                    </a>
+                </div>
+
+                <!-- DevOps -->
+                <div class="course-card master-card rounded-3xl p-8 relative">
+                    <div class="absolute top-4 right-4 bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        AUTOMATION
+                    </div>
+                    <div class="absolute top-4 left-4 bg-danger-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        SAVE $1,000
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🚀</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-2">DevOps Expert</h3>
+                        <p class="text-gray-600 mb-4">Infrastructure as code mastery. Salary: $120K-$180K</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="text-4xl font-black text-teal-600 mb-2">$2,799</div>
+                        <div class="text-lg text-gray-500 line-through mb-1">Regular: $3,799</div>
+                        <div class="text-lg text-success-600 font-bold">You Save: $1,000</div>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm mb-8">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>CI/CD pipeline mastery</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Kubernetes & Docker</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Infrastructure automation</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Cloud-native technologies</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-success-600 font-bold">✓</span>
+                            <span>Industry job placement</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#master-enroll" class="block w-full bg-teal-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-teal-700 transition-all">
+                        Start Training Now
                     </a>
                 </div>
             </div>
 
-            <!-- Elite Guarantee Banner -->
+            <!-- Master Guarantee Banner -->
             <div class="mt-16 text-center">
                 <div class="inline-flex items-center bg-success-100 border-2 border-success-600 rounded-2xl px-8 py-4">
                     <span class="text-4xl mr-4">🏆</span>
                     <div class="text-left">
-                        <div class="text-xl font-black text-success-800">Elite Success Guarantee</div>
+                        <div class="text-xl font-black text-success-800">95% Success Guarantee</div>
                         <div class="text-success-700">Pass on first attempt or get 100% refund + additional training FREE</div>
                     </div>
                 </div>
@@ -528,99 +681,99 @@
         </div>
     </section>
 
-    <!-- Elite Trial Section -->
-    <section id="elite-trial" class="py-20 elite-gradient text-white">
+    <!-- Master Trial Section -->
+    <section id="master-trial" class="py-20 master-gradient text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl md:text-6xl font-black mb-6">
-                Join the Elite 3%
+                Start Your FREE Trial
             </h2>
             <p class="text-xl mb-8 opacity-90">
-                Experience elite-level training with our exclusive 14-day trial. Full access to labs, elite instructors, and career transformation programs.
+                Experience our world-class training with our exclusive 7-day trial. Full access to labs, instructors, and career transformation programs.
             </p>
             
-            <div class="glass-elite rounded-3xl p-10 mb-10">
-                <h3 class="text-3xl font-bold mb-8">Your Elite Trial Includes:</h3>
+            <div class="glass-master rounded-3xl p-10 mb-10">
+                <h3 class="text-3xl font-bold mb-8">Your FREE Trial Includes:</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                     <div class="flex items-center space-x-4">
                         <span class="text-3xl">⚡</span>
-                        <span class="text-lg">Access to all elite labs (real equipment)</span>
+                        <span class="text-lg">Full lab access (real equipment)</span>
                     </div>
                     <div class="flex items-center space-x-4">
                         <span class="text-3xl">🏆</span>
-                        <span class="text-lg">1:1 elite instructor consultation</span>
+                        <span class="text-lg">1:1 instructor consultation</span>
                     </div>
                     <div class="flex items-center space-x-4">
                         <span class="text-3xl">📚</span>
-                        <span class="text-lg">Complete elite study materials</span>
+                        <span class="text-lg">Complete study materials</span>
                     </div>
                     <div class="flex items-center space-x-4">
                         <span class="text-3xl">🎯</span>
-                        <span class="text-lg">Personalized elite career roadmap</span>
+                        <span class="text-lg">Personal career roadmap</span>
                     </div>
                     <div class="flex items-center space-x-4">
                         <span class="text-3xl">💬</span>
-                        <span class="text-lg">Elite community access</span>
+                        <span class="text-lg">Community access</span>
                     </div>
                     <div class="flex items-center space-x-4">
                         <span class="text-3xl">🚀</span>
-                        <span class="text-lg">Elite job placement preparation</span>
+                        <span class="text-lg">Job placement preparation</span>
                     </div>
                 </div>
             </div>
             
-            <a href="https://wa.me/16034861896?text=I want to join EliteLab's exclusive 14-day elite trial program!" 
-               class="bg-gold-600 text-white px-12 py-6 rounded-2xl font-black text-2xl hover:bg-gold-700 transition-all inline-flex items-center justify-center animate-elite-glow mb-8">
-                <span class="mr-3">⚡</span>
-                <span>Claim Elite Trial Now</span>
+            <a href="https://wa.me/16034861896?text=I want to start my FREE 7-day trial with CCIE Master!" 
+               class="bg-gold-600 text-white px-12 py-6 rounded-2xl font-black text-2xl hover:bg-gold-700 transition-all inline-flex items-center justify-center animate-master-glow mb-8">
+                <span class="mr-3">🚀</span>
+                <span>Start FREE Trial Now</span>
             </a>
             
             <div class="text-lg opacity-80">
-                <p>No payment required • Full elite access for 14 days • Cancel anytime</p>
+                <p>No payment required • Full access for 7 days • Cancel anytime</p>
             </div>
         </div>
     </section>
 
-    <!-- Elite Success Metrics -->
+    <!-- Master Success Metrics -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-                    Elite Results Speak
+                    Proven Track Record
                 </h2>
-                <p class="text-xl text-gray-600">When you join the elite 3%, these are the results you can expect</p>
+                <p class="text-xl text-gray-600">Numbers don't lie - our students achieve exceptional results</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="text-center elite-card rounded-2xl p-6">
-                    <div class="text-5xl font-black text-elite-600 mb-3">97%</div>
-                    <div class="text-xl font-bold text-gray-900 mb-2">Elite Pass Rate</div>
-                    <div class="text-gray-600">First attempt success rate</div>
+                <div class="text-center master-card rounded-2xl p-6">
+                    <div class="text-5xl font-black text-master-600 mb-3">95%</div>
+                    <div class="text-xl font-bold text-gray-900 mb-2">Pass Rate</div>
+                    <div class="text-gray-600">First attempt success</div>
                 </div>
-                <div class="text-center elite-card rounded-2xl p-6">
-                    <div class="text-5xl font-black text-gold-600 mb-3">$55K</div>
+                <div class="text-center master-card rounded-2xl p-6">
+                    <div class="text-5xl font-black text-gold-600 mb-3">$45K</div>
                     <div class="text-xl font-bold text-gray-900 mb-2">Average Salary Jump</div>
-                    <div class="text-gray-600">Within 90 days</div>
+                    <div class="text-gray-600">Within 6 months</div>
                 </div>
-                <div class="text-center elite-card rounded-2xl p-6">
-                    <div class="text-5xl font-black text-success-600 mb-3">15K+</div>
-                    <div class="text-xl font-bold text-gray-900 mb-2">Elite Alumni</div>
+                <div class="text-center master-card rounded-2xl p-6">
+                    <div class="text-5xl font-black text-success-600 mb-3">10K+</div>
+                    <div class="text-xl font-bold text-gray-900 mb-2">Students Trained</div>
                     <div class="text-gray-600">Since 2018</div>
                 </div>
-                <div class="text-center elite-card rounded-2xl p-6">
-                    <div class="text-5xl font-black text-purple-600 mb-3">92%</div>
-                    <div class="text-xl font-bold text-gray-900 mb-2">Elite Placement</div>
-                    <div class="text-gray-600">Within 60 days</div>
+                <div class="text-center master-card rounded-2xl p-6">
+                    <div class="text-5xl font-black text-purple-600 mb-3">88%</div>
+                    <div class="text-xl font-bold text-gray-900 mb-2">Job Placement</div>
+                    <div class="text-gray-600">Within 3 months</div>
                 </div>
             </div>
 
-            <!-- Elite Guarantees -->
-            <div class="elite-card rounded-3xl p-10">
-                <h3 class="text-3xl font-black text-gray-900 mb-8 text-center">Our Elite Guarantees</h3>
+            <!-- Master Guarantees -->
+            <div class="master-card rounded-3xl p-10">
+                <h3 class="text-3xl font-black text-gray-900 mb-8 text-center">Our Guarantees to You</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="text-center">
                         <div class="text-6xl mb-4">🎯</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">97% Success Guarantee</h4>
-                        <p class="text-gray-600">Pass on first attempt or get additional elite training absolutely FREE</p>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">95% Pass Rate Guarantee</h4>
+                        <p class="text-gray-600">Pass on your first attempt or get additional training absolutely FREE</p>
                     </div>
                     <div class="text-center">
                         <div class="text-6xl mb-4">💰</div>
@@ -628,205 +781,205 @@
                         <p class="text-gray-600">Not satisfied within 30 days? Full refund, no questions asked</p>
                     </div>
                     <div class="text-center">
-                        <div class="text-6xl mb-4">👑</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Elite Career Promise</h4>
-                        <p class="text-gray-600">We support you until you land your elite $150K+ role</p>
+                        <div class="text-6xl mb-4">🏆</div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Career Success Promise</h4>
+                        <p class="text-gray-600">We support you until you land your dream $120K+ role</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final Elite CTA -->
-    <section class="py-20 elite-gradient text-white">
+    <!-- Final Master CTA -->
+    <section class="py-20 master-gradient text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl md:text-6xl font-black mb-6">
-                Ready to Join the Elite?
+                Ready to Transform Your Career?
             </h2>
             <p class="text-xl mb-8 opacity-90">
-                Stop settling for average. Join 15,000+ elite professionals who chose EliteLab for guaranteed success.
+                Join 10,000+ IT professionals who chose CCIE Master for guaranteed success and career transformation.
             </p>
             
             <div class="bg-danger-500/20 border-2 border-danger-300 rounded-2xl p-6 mb-10 animate-countdown">
                 <div class="text-2xl font-black text-yellow-300 mb-2">⏰ FLASH SALE ENDING</div>
-                <div class="text-lg">Elite enrollment closes in: <span id="final-countdown" class="font-black text-yellow-300 text-2xl"></span></div>
-                <div class="text-sm mt-2">Only 3 elite spots remaining!</div>
+                <div class="text-lg">Enrollment closes in: <span id="final-countdown" class="font-black text-yellow-300 text-2xl"></span></div>
+                <div class="text-sm mt-2">Only 3 spots remaining!</div>
             </div>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-                <a href="#elite-trial" 
-                   class="bg-gold-600 text-white px-12 py-6 rounded-2xl font-black text-xl hover:bg-gold-700 transition-all animate-elite-glow inline-flex items-center justify-center">
-                    <span class="mr-3">⚡</span>
-                    <span>Claim Elite Trial</span>
+                <a href="#master-trial" 
+                   class="bg-gold-600 text-white px-12 py-6 rounded-2xl font-black text-xl hover:bg-gold-700 transition-all animate-master-glow inline-flex items-center justify-center">
+                    <span class="mr-3">🚀</span>
+                    <span>Start FREE Trial</span>
                 </a>
-                <a href="https://wa.me/16034861896?text=I'm ready to join EliteLab! Please send me enrollment details for your elite programs." 
-                   class="bg-white text-elite-600 px-12 py-6 rounded-2xl font-black text-xl hover:bg-gray-100 transition-all inline-flex items-center justify-center">
+                <a href="https://wa.me/16034861896?text=I'm ready to join CCIE Master! Please send me enrollment details for your training programs." 
+                   class="bg-white text-master-600 px-12 py-6 rounded-2xl font-black text-xl hover:bg-gray-100 transition-all inline-flex items-center justify-center">
                     <span class="mr-3">🏆</span>
-                    <span>Join Elite Now</span>
+                    <span>Enroll Now</span>
                 </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm opacity-75">
                 <div class="flex items-center justify-center space-x-2">
                     <span>🔒</span>
-                    <span>Secure elite enrollment</span>
+                    <span>Secure enrollment process</span>
                 </div>
                 <div class="flex items-center justify-center space-x-2">
                     <span>⚡</span>
-                    <span>Instant elite access</span>
+                    <span>Instant access after signup</span>
                 </div>
                 <div class="flex items-center justify-center space-x-2">
                     <span>🏆</span>
-                    <span>Elite support guaranteed</span>
+                    <span>Success guaranteed</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Elite Footer -->
+    <!-- Master Footer -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-6">
-                        <span class="text-3xl">⚡</span>
-                        <span class="text-2xl font-black">Elite</span>
-                        <span class="text-2xl font-light text-elite-400">Lab</span>
+                        <span class="text-3xl">🎯</span>
+                        <span class="text-2xl font-black">CCIE</span>
+                        <span class="text-2xl font-light text-master-400">Master</span>
                     </div>
                     <p class="text-gray-300 mb-4 text-lg">
-                        Elite Training • Elite Results • Elite Careers
+                        Master Training • Master Results • Master Careers
                     </p>
                     <p class="text-gray-400">
-                        Join the elite 3% of IT professionals with guaranteed success training.
+                        Professional IT certification training with proven results and guaranteed success.
                     </p>
                     <div class="mt-4 flex items-center space-x-1 text-gold-400">
                         <span>⭐⭐⭐⭐⭐</span>
-                        <span class="text-sm text-gray-400">4.97/5 (3,842 elite reviews)</span>
+                        <span class="text-sm text-gray-400">4.9/5 (2,847 reviews)</span>
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-xl font-bold mb-6">Elite Programs</h3>
+                    <h3 class="text-xl font-bold mb-6">Training Programs</h3>
                     <ul class="space-y-3 text-gray-300">
-                        <li>🏆 Elite CCIE Master</li>
-                        <li>☁️ Elite Cloud Master</li>
-                        <li>🛡️ Elite Security Master</li>
-                        <li>🚀 Elite DevOps Master</li>
-                        <li>📊 Elite Data Master</li>
-                        <li>🤖 Elite AI/ML Master</li>
+                        <li>🏆 CCIE Enterprise Infrastructure</li>
+                        <li>☁️ Cloud Certifications (AWS/Azure)</li>
+                        <li>🛡️ CCIE Security</li>
+                        <li>🐧 Red Hat Certified Engineer</li>
+                        <li>🌐 Juniper Networks</li>
+                        <li>🚀 DevOps & Automation</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-xl font-bold mb-6">Elite Results</h3>
+                    <h3 class="text-xl font-bold mb-6">Success Stats</h3>
                     <ul class="space-y-3 text-gray-300">
-                        <li>97% Elite pass rate</li>
-                        <li>15,000+ Elite graduates</li>
-                        <li>$55K Average salary increase</li>
-                        <li>92% Elite job placement</li>
-                        <li>4.97/5 Elite satisfaction</li>
-                        <li>100% Elite guarantee</li>
+                        <li>95% First-attempt pass rate</li>
+                        <li>10,000+ Students trained</li>
+                        <li>$45K Average salary increase</li>
+                        <li>88% Job placement rate</li>
+                        <li>4.9/5 Student satisfaction</li>
+                        <li>100% Money-back guarantee</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-xl font-bold mb-6">Join Elite</h3>
+                    <h3 class="text-xl font-bold mb-6">Contact</h3>
                     <div class="space-y-3 text-gray-300 mb-6">
-                        <p>📧 elite@elitelab.com</p>
+                        <p>📧 hello@cciemaster.com</p>
                         <p>💬 +1 (603) 486-1896</p>
-                        <p>🌐 elitelab.com</p>
-                        <p>⚡ 24/7 Elite support</p>
+                        <p>🌐 cciemaster.com</p>
+                        <p>⚡ 24/7 Support available</p>
                     </div>
                     <a href="https://wa.me/16034861896" class="bg-success-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-success-700 transition-colors inline-block">
-                        Join Elite Community
+                        Chat on WhatsApp
                     </a>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 EliteLab. All rights reserved. Transform your career with elite training - guaranteed success in 3 months.</p>
+                <p>&copy; 2024 CCIE Master. All rights reserved. Transform your IT career in 4 months with guaranteed success.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Elite JavaScript -->
+    <!-- Master JavaScript -->
     <script>
-        // Elite Success Stories
-        const eliteStories = [
+        // Master Success Stories
+        const masterStories = [
             {
                 name: "Michael Chen",
-                title: "Jr. Network Admin → Elite CCIE Architect",
+                title: "Jr. Network Admin → CCIE Architect",
                 company: "Google",
-                story: "From $55K to $185K at Google in just 3 months with EliteLab's elite CCIE program. The personalized mentoring and real lab environment made all the difference!",
-                increase: "$130K salary jump",
-                timeframe: "3 months",
+                story: "From $55K to $165K at Google in just 4 months with CCIE Master's training program. The hands-on labs and expert mentoring made all the difference!",
+                increase: "$110K salary jump",
+                timeframe: "4 months",
                 date: "Today"
             },
             {
                 name: "Sarah Rodriguez",
-                title: "Help Desk → Elite Cloud Architect",
+                title: "Help Desk → Cloud Architect",
                 company: "Amazon Web Services",
-                story: "EliteLab transformed my career from help desk to $220K cloud architect at AWS. Their elite methodology is simply unmatched!",
-                increase: "$165K salary jump",
-                timeframe: "2.5 months",
+                story: "CCIE Master transformed my career from help desk to $180K cloud architect at AWS. Their methodology is simply unmatched in the industry!",
+                increase: "$125K salary jump",
+                timeframe: "3.5 months",
                 date: "Yesterday"
             },
             {
                 name: "David Kim",
-                title: "IT Support → Elite Security Expert",
+                title: "IT Support → Security Expert",
                 company: "Microsoft",
-                story: "Now earning $240K as a security architect at Microsoft. EliteLab's elite security program opened doors I never imagined possible.",
-                increase: "$180K salary jump",
-                timeframe: "3.5 months",
+                story: "Now earning $200K as a security architect at Microsoft. CCIE Master's security program opened doors I never thought possible.",
+                increase: "$145K salary jump",
+                timeframe: "4.5 months",
                 date: "2 days ago"
             },
             {
                 name: "Amanda Johnson",
-                title: "System Admin → Elite DevOps Leader",
+                title: "System Admin → DevOps Leader",
                 company: "Netflix",
-                story: "From system admin to $200K DevOps lead at Netflix. The elite training methodology at EliteLab is revolutionary!",
-                increase: "$145K salary jump",
-                timeframe: "3 months",
+                story: "From system admin to $170K DevOps lead at Netflix. The training methodology at CCIE Master is revolutionary and highly effective!",
+                increase: "$115K salary jump",
+                timeframe: "4 months",
                 date: "3 days ago"
             },
             {
                 name: "Robert Singh",
-                title: "Desktop Support → Elite Data Scientist",
+                title: "Desktop Support → Network Engineer",
                 company: "Tesla",
-                story: "Transitioned from desktop support to $195K data scientist at Tesla. EliteLab's elite AI program exceeded every expectation!",
-                increase: "$150K salary jump",
+                story: "Transitioned from desktop support to $150K network engineer at Tesla. CCIE Master's comprehensive program exceeded all my expectations!",
+                increase: "$100K salary jump",
                 timeframe: "4 months",
                 date: "1 week ago"
             }
         ];
 
-        // Elite Live Notifications
-        const eliteNotifications = [
-            "🎉 Sarah from New York just enrolled in Elite CCIE Master!",
-            "⚡ Michael completed Elite Cloud certification - landed $220K role!",
-            "🏆 Jessica from California secured Elite Security spot!",
-            "💰 David promoted to $240K after Elite program completion!",
-            "🚀 Emma from Texas started her Elite trial today!",
-            "🎯 Robert passed CCIE on first attempt - Elite success!",
-            "💼 Lisa landed $210K architect role at Apple!",
-            "⭐ Carlos achieved Elite status: 'Life-changing program!'",
-            "🔥 Maria from Florida joined Elite community!",
-            "💎 Alex became Elite instructor after program success!"
+        // Master Live Notifications
+        const masterNotifications = [
+            "🎉 Sarah from California just enrolled in CCIE Enterprise!",
+            "⚡ Michael completed his cloud certification - landed $180K role!",
+            "🏆 Jessica from Texas secured her spot in Security program!",
+            "💰 David got promoted to $200K after program completion!",
+            "🚀 Emma from Florida started her free trial today!",
+            "🎯 Robert passed CCIE on first attempt - 95% success rate!",
+            "💼 Lisa landed $170K architect role at Apple!",
+            "⭐ Carlos left 5-star review: 'Life-changing program!'",
+            "🔥 Maria from New York joined CCIE Master community!",
+            "💎 Alex became instructor after program success!"
         ];
 
-        let currentEliteStoryIndex = 0;
-        let currentEliteNotificationIndex = 0;
+        let currentMasterStoryIndex = 0;
+        let currentMasterNotificationIndex = 0;
 
-        // Elite Story Carousel
-        function updateEliteStory() {
-            const story = eliteStories[currentEliteStoryIndex];
-            const carousel = document.getElementById('elite-carousel');
+        // Master Story Carousel
+        function updateMasterStory() {
+            const story = masterStories[currentMasterStoryIndex];
+            const carousel = document.getElementById('master-carousel');
             const timestamp = document.getElementById('story-timestamp');
             
             carousel.innerHTML = `
                 <div class="animate-slide-up">
                     <div class="flex items-start space-x-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-elite-600 to-gold-600 rounded-2xl flex items-center justify-center text-white font-black text-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-master-600 to-gold-600 rounded-2xl flex items-center justify-center text-white font-black text-lg">
                             ${story.name.split(' ')[0][0]}${story.name.split(' ')[1][0]}
                         </div>
                         <div class="flex-1">
@@ -835,7 +988,7 @@
                             <div class="text-sm text-white/90 mb-4 leading-relaxed">"${story.story}"</div>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-success-500/20 text-success-300 px-3 py-1 rounded-full text-xs font-bold">${story.increase}</span>
-                                <span class="bg-elite-500/20 text-elite-300 px-3 py-1 rounded-full text-xs font-bold">${story.timeframe}</span>
+                                <span class="bg-master-500/20 text-master-300 px-3 py-1 rounded-full text-xs font-bold">${story.timeframe}</span>
                                 <span class="bg-gold-500/20 text-gold-300 px-3 py-1 rounded-full text-xs font-bold">${story.company}</span>
                             </div>
                         </div>
@@ -844,16 +997,16 @@
             `;
             
             timestamp.textContent = story.date;
-            currentEliteStoryIndex = (currentEliteStoryIndex + 1) % eliteStories.length;
+            currentMasterStoryIndex = (currentMasterStoryIndex + 1) % masterStories.length;
         }
 
-        // Elite Live Notifications
-        function showEliteNotification() {
-            const notification = eliteNotifications[currentEliteNotificationIndex];
-            const container = document.getElementById('elite-notifications');
+        // Master Live Notifications
+        function showMasterNotification() {
+            const notification = masterNotifications[currentMasterNotificationIndex];
+            const container = document.getElementById('master-notifications');
             
             const notificationEl = document.createElement('div');
-            notificationEl.className = 'elite-notification bg-white shadow-2xl border border-elite-200 rounded-2xl p-4 text-sm font-semibold text-gray-800 max-w-sm';
+            notificationEl.className = 'master-notification bg-white shadow-2xl border border-master-200 rounded-2xl p-4 text-sm font-semibold text-gray-800 max-w-sm';
             notificationEl.innerHTML = `
                 <div class="flex items-center space-x-2">
                     <div class="w-2 h-2 bg-success-500 rounded-full animate-pulse"></div>
@@ -869,11 +1022,11 @@
                 }
             }, 5000);
             
-            currentEliteNotificationIndex = (currentEliteNotificationIndex + 1) % eliteNotifications.length;
+            currentMasterNotificationIndex = (currentMasterNotificationIndex + 1) % masterNotifications.length;
         }
 
-        // Elite Countdown Timer
-        function updateEliteCountdown() {
+        // Master Countdown Timer
+        function updateMasterCountdown() {
             const endDate = new Date();
             endDate.setHours(endDate.getHours() + 3); // 3 hours from now
             
@@ -898,51 +1051,55 @@
             }
         }
 
-        // Elite Progress Bar
-        function updateEliteProgress() {
+        // Master Progress Bar
+        function updateMasterProgress() {
             const progressBar = document.getElementById('progress-bar');
             const scrolled = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             progressBar.style.width = scrolled + '%';
         }
 
-        // Initialize Elite Features
+        // Initialize Master Features
         document.addEventListener('DOMContentLoaded', function() {
-            // Update elite story every 8 seconds
-            updateEliteStory();
-            setInterval(updateEliteStory, 8000);
+            // Update master story every 8 seconds
+            updateMasterStory();
+            setInterval(updateMasterStory, 8000);
             
-            // Show elite notification every 10 seconds
+            // Show master notification every 10 seconds
             setTimeout(() => {
-                showEliteNotification();
-                setInterval(showEliteNotification, 10000);
+                showMasterNotification();
+                setInterval(showMasterNotification, 10000);
             }, 3000);
             
             // Update countdown every second
-            updateEliteCountdown();
-            setInterval(updateEliteCountdown, 1000);
+            updateMasterCountdown();
+            setInterval(updateMasterCountdown, 1000);
             
             // Update progress bar on scroll
-            window.addEventListener('scroll', updateEliteProgress);
+            window.addEventListener('scroll', updateMasterProgress);
         });
 
-        // Elite Click Tracking
+        // Master Click Tracking
         document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
             link.addEventListener('click', () => {
-                console.log('Elite WhatsApp engagement');
+                console.log('CCIE Master WhatsApp engagement');
             });
         });
         
-        document.querySelectorAll('a[href*="#elite-trial"]').forEach(link => {
+        document.querySelectorAll('a[href*="#master-trial"]').forEach(link => {
             link.addEventListener('click', () => {
-                console.log('Elite trial engagement');
+                console.log('CCIE Master trial engagement');
             });
         });
 
-        document.querySelectorAll('a[href*="#elite-enroll"]').forEach(link => {
+        document.querySelectorAll('a[href*="#master-enroll"]').forEach(link => {
             link.addEventListener('click', () => {
-                console.log('Elite enrollment engagement');
+                console.log('CCIE Master enrollment engagement');
             });
         });
     </script>
+
+    <!-- Mobile Menu and Promotions System -->
+    <script src="js/promotions-config.js"></script>
+    <script src="js/mobile-menu.js"></script>
 </body>
 </html>
