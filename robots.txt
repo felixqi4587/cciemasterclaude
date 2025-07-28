@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Allow all web crawlers to access all content
+
+Sitemap: https://456lab.com/sitemap.xml
