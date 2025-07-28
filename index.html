@@ -151,29 +151,24 @@
 </head>
 
 <body class="bg-gray-50">
-    <!-- Ultra-Urgent Notification Bar -->
-    <div class="fixed top-0 left-0 right-0 z-50 bg-danger-600 text-white text-center py-3 text-sm font-bold animate-countdown">
-        🚨 FLASH SALE: Only 3 Master Spots Left! Winter Enrollment closes in <span id="flash-countdown" class="text-yellow-300 font-black"></span> 🎯
-    </div>
-
     <!-- Master Progress Bar -->
-    <div class="fixed top-12 left-0 right-0 z-40">
+    <div class="fixed top-0 left-0 right-0 z-40">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
 
     <!-- Floating Master Notifications -->
-    <div id="master-notifications" class="fixed bottom-4 left-4 z-50 space-y-2 max-w-sm"></div>
+    <div id="master-notifications" class="fixed bottom-4 left-4 z-50 space-y-2 max-w-sm hidden md:block"></div>
 
     <!-- Floating CTA -->
     <div class="floating-cta md:hidden">
-        <a href="#master-trial" class="bg-success-600 text-white px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-success flex items-center space-x-2">
+        <a href="#master-trial" class="bg-success-600 text-white px-6 py-3 rounded-full font-bold shadow-lg flex items-center space-x-2">
             <span>🎯</span>
             <span>Join CCIE Master</span>
         </a>
     </div>
 
     <!-- Header -->
-    <header class="fixed top-12 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-lg border-b border-master-200">
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-lg border-b border-master-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
@@ -355,8 +350,8 @@
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
                     Master the most in-demand IT certifications with our proven 95% success methodology and guaranteed results.
                 </p>
-                <div class="inline-flex items-center bg-danger-100 text-danger-800 px-6 py-3 rounded-full text-lg font-bold animate-countdown">
-                    🔥 FLASH SALE: Save up to $1,500 - 3 Hours Remaining!
+                <div class="inline-flex items-center bg-master-100 text-master-800 px-6 py-3 rounded-full text-lg font-bold">
+                    Save up to $1,500 with Current Promotion
                 </div>
             </div>
 
@@ -800,10 +795,9 @@
                 Join 10,000+ IT professionals who chose CCIE Master for guaranteed success and career transformation.
             </p>
             
-            <div class="bg-danger-500/20 border-2 border-danger-300 rounded-2xl p-6 mb-10 animate-countdown">
-                <div class="text-2xl font-black text-yellow-300 mb-2">⏰ FLASH SALE ENDING</div>
-                <div class="text-lg">Enrollment closes in: <span id="final-countdown" class="font-black text-yellow-300 text-2xl"></span></div>
-                <div class="text-sm mt-2">Only 3 spots remaining!</div>
+            <div class="bg-master-500/20 border-2 border-master-300 rounded-2xl p-6 mb-10">
+                <div class="text-2xl font-black text-yellow-300 mb-2">⏰ Promotion Ends Soon</div>
+                <div class="text-lg">Promotion ends in: <span id="final-countdown" class="font-black text-yellow-300 text-2xl"></span></div>
             </div>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center mb-8">
@@ -955,16 +949,16 @@
 
         // Master Live Notifications
         const masterNotifications = [
-            "🎉 Sarah from California just enrolled in CCIE Enterprise!",
-            "⚡ Michael completed his cloud certification - landed $180K role!",
-            "🏆 Jessica from Texas secured her spot in Security program!",
-            "💰 David got promoted to $200K after program completion!",
-            "🚀 Emma from Florida started her free trial today!",
-            "🎯 Robert passed CCIE on first attempt - 95% success rate!",
-            "💼 Lisa landed $170K architect role at Apple!",
-            "⭐ Carlos left 5-star review: 'Life-changing program!'",
-            "🔥 Maria from New York joined CCIE Master community!",
-            "💎 Alex became instructor after program success!"
+            "Sarah from California just enrolled in CCIE Enterprise",
+            "Michael completed his cloud certification - landed $180K role",
+            "Jessica from Texas secured her spot in Security program",
+            "David got promoted to $200K after program completion",
+            "Emma from Florida started her free trial today",
+            "Robert passed CCIE on first attempt with our program",
+            "Lisa landed $170K architect role at Apple",
+            "Carlos left 5-star review: 'Life-changing program!'",
+            "Maria from New York joined CCIE Master community",
+            "Alex became instructor after program success"
         ];
 
         let currentMasterStoryIndex = 0;
@@ -1064,11 +1058,11 @@
             updateMasterStory();
             setInterval(updateMasterStory, 8000);
             
-            // Show master notification every 10 seconds
+            // Show master notification every 30 seconds
             setTimeout(() => {
                 showMasterNotification();
-                setInterval(showMasterNotification, 10000);
-            }, 3000);
+                setInterval(showMasterNotification, 30000);
+            }, 5000);
             
             // Update countdown every second
             updateMasterCountdown();
