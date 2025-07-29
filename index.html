@@ -11,7 +11,7 @@
     <meta property="og:description" content="4-month intensive IT certification training (8 hours daily). Service extends if exam changes, refund if questions incorrect. 95% first-attempt pass rate.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cciemaster.com">
-    <meta property="og:image" content="https://cciemaster.com/images/ccie-primary-social.jpg">
+    <meta property="og:image" content="https://cciemaster.com/images/ccie-brand-social.jpg">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
@@ -23,44 +23,45 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: {
-                            50: '#f0f4ff',
-                            100: '#e0e7ff',
-                            200: '#c7d2fe',
-                            300: '#a5b4fc',
-                            400: '#818cf8',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                            800: '#3730a3',
-                            900: '#312e81',
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
                         },
-                        accent: {
-                            50: '#fef3c7',
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
                             500: '#f59e0b',
                             600: '#d97706',
                             700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
                         },
                         success: {
-                            500: '#059669',
-                            600: '#047857',
-                            700: '#065f46',
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
                         },
-                        neutral: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
+                        danger: {
+                            50: '#fef2f2',
+                            500: '#ef4444',
+                            600: '#dc2626',
                         }
                     },
                     animation: {
-                        'primary-glow': 'primary-glow 2s ease-in-out infinite alternate',
+                        'brand-glow': 'brand-glow 2s ease-in-out infinite alternate',
                         'countdown': 'countdown 1s ease-in-out infinite',
                         'slide-up': 'slide-up 0.5s ease-out',
                         'fade-in': 'fade-in 0.6s ease-out',
@@ -77,27 +78,28 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         
-        .primary-gradient { 
-            background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #818cf8 100%); 
+        .hero-gradient { 
+            background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0284c7 100%); 
         }
         
-        .accent-gradient { 
+        .gold-gradient { 
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); 
         }
         
-        .glass-card { 
-            background: rgba(255, 255, 255, 0.95); 
+        .success-card { 
+            background: rgba(255, 255, 255, 0.98); 
             backdrop-filter: blur(20px); 
-            border: 1px solid rgba(99, 102, 241, 0.1); 
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
         }
         
-        .professional-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08);
-            border: 1px solid rgba(203, 213, 225, 0.2);
+        .clean-card {
+            background: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 16px rgba(14, 165, 233, 0.06);
         }
         
-        @keyframes primary-glow {
+        @keyframes brand-glow {
             0% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.5); }
             100% { box-shadow: 0 0 40px rgba(14, 165, 233, 0.8), 0 0 60px rgba(14, 165, 233, 0.4); }
         }
@@ -122,7 +124,7 @@
             70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
         }
         
-        .primary-notification {
+        .brand-notification {
             animation: slide-up 0.5s ease-out;
         }
         
@@ -149,7 +151,7 @@
             min-height: 200px;
         }
         
-        .primary-badge {
+        .brand-badge {
             background: linear-gradient(145deg, #fbbf24, #f59e0b);
             background-clip: text;
             -webkit-background-clip: text;
@@ -165,7 +167,7 @@
     </div>
 
     <!-- Floating Master Notifications -->
-    <div id="primary-notifications" class="fixed bottom-4 left-4 z-50 space-y-2 max-w-sm hidden md:block"></div>
+    <div id="brand-notifications" class="fixed bottom-4 left-4 z-50 space-y-2 max-w-sm hidden md:block"></div>
 
     <!-- Floating CTA -->
     <div class="floating-cta md:hidden">
@@ -176,35 +178,35 @@
     </div>
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-lg border-b border-primary-200">
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-lg border-b border-brand-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <div class="flex items-center space-x-2">
                         <span class="text-3xl">🎯</span>
-                        <span class="text-2xl font-black text-primary-800">CCIE</span>
-                        <span class="text-2xl font-light text-primary-600">Master</span>
+                        <span class="text-2xl font-black text-brand-800">CCIE</span>
+                        <span class="text-2xl font-light text-brand-600">Master</span>
                     </div>
                     <div class="hidden lg:flex items-center space-x-6 ml-8">
-                        <div class="flex items-center space-x-1 text-accent-600">
+                        <div class="flex items-center space-x-1 text-gold-600">
                             <span class="text-sm">⭐⭐⭐⭐⭐</span>
                             <span class="text-sm font-bold">4.9/5 (2,847 reviews)</span>
                         </div>
                         <div class="bg-success-100 text-success-800 px-4 py-1 rounded-full text-sm font-bold">
                             95% Master Success Rate
                         </div>
-                        <div class="bg-primary-100 text-primary-800 px-4 py-1 rounded-full text-sm font-bold">
+                        <div class="bg-brand-100 text-brand-800 px-4 py-1 rounded-full text-sm font-bold">
                             10,000+ Master Graduates
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-3">
                     <a href="https://wa.me/16034861896?text=I want to learn more about CCIE Master training programs!" 
-                       class="bg-accent-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-accent-700 transition-colors animate-pulse">
+                       class="bg-gold-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-gold-700 transition-colors hover:shadow-lg transition-all duration-300">
                         Learn More
                     </a>
                     <a href="https://wa.me/16034861896?text=I want to join CCIE Master's training program!" 
-                       class="bg-primary-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-700 transition-colors">
+                       class="bg-brand-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-brand-700 transition-colors">
                         Enroll Now
                     </a>
                 </div>
@@ -213,7 +215,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="primary-gradient text-white min-h-screen flex items-center pt-32 pb-20 relative overflow-hidden">
+    <section class="hero-gradient text-white min-h-screen flex items-center pt-32 pb-20 relative overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute -top-10 -right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -224,12 +226,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="text-center lg:text-left animate-fade-in">
                     <!-- Master Badge -->
-                    <div class="inline-flex items-center bg-accent-500/20 text-accent-300 px-6 py-3 rounded-full text-sm font-bold mb-6 animate-pulse">
+                    <div class="inline-flex items-center bg-gold-500/20 text-gold-300 px-6 py-3 rounded-full text-sm font-bold mb-6 hover:shadow-lg transition-all duration-300">
                         🏆 #1 IT Certification Training Platform - Winter 2025
                     </div>
                     
                     <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                        <span class="primary-badge">CCIE</span> Master
+                        <span class="brand-badge">CCIE</span> Master
                     </h1>
                     
                     <h2 class="text-2xl md:text-4xl font-bold mb-8 leading-tight">
@@ -243,7 +245,7 @@
                     <!-- Master Stats -->
                     <div class="grid grid-cols-3 gap-6 mb-10">
                         <div class="text-center">
-                            <div class="text-4xl font-black text-accent-300 mb-2">95%</div>
+                            <div class="text-4xl font-black text-gold-300 mb-2">95%</div>
                             <div class="text-sm font-semibold opacity-80">Pass Rate</div>
                         </div>
                         <div class="text-center">
@@ -259,12 +261,12 @@
                     <!-- Master CTAs -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-8">
                         <a href="https://wa.me/16034861896?text=I want to enroll in CCIE Master training program!" 
-                           class="bg-accent-600 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-accent-700 transition-all animate-pulse inline-flex items-center justify-center group">
+                           class="bg-gold-600 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-gold-700 transition-all hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center group">
                             <span class="mr-3">🎯</span>
                             <span>Enroll Now</span>
                             <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
                         </a>
-                        <a href="#primary-programs" 
+                        <a href="#brand-programs" 
                            class="bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/30 transition-all inline-flex items-center justify-center">
                             <span class="mr-3">🏆</span>
                             <span>View Programs</span>
@@ -289,20 +291,20 @@
                 </div>
 
                 <!-- Master Success Stories Carousel -->
-                <div class="glass-card rounded-3xl p-8 animate-slide-up">
+                <div class="success-card rounded-3xl p-8 animate-slide-up">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">Latest Success Stories</h3>
-                        <div class="text-sm opacity-75">Live updates from our community</div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Latest Success Stories</h3>
+                        <div class="text-sm text-gray-600">Live updates from our community</div>
                     </div>
                     
-                    <div id="primary-carousel" class="testimonial-card mb-6">
+                    <div id="brand-carousel" class="testimonial-card mb-6">
                         <!-- Dynamic testimonials will populate here -->
                     </div>
                     
                     <div class="text-center">
-                        <div class="inline-flex items-center space-x-4 text-sm opacity-75">
+                        <div class="inline-flex items-center space-x-4 text-sm text-gray-500">
                             <div class="flex items-center space-x-1">
-                                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                                <div class="w-2 h-2 bg-success-500 rounded-full animate-pulse"></div>
                                 <span>Live</span>
                             </div>
                             <span>Updated: <span id="story-timestamp"></span></span>
@@ -315,7 +317,7 @@
 
 
     <!-- Master Programs Section -->
-    <section id="primary-programs" class="py-20 bg-gray-50">
+    <section id="brand-programs" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6">
@@ -324,15 +326,15 @@
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
                     Master the most in-demand IT certifications with our proven 95% success methodology and guaranteed results.
                 </p>
-                <div class="inline-flex items-center bg-primary-100 text-primary-800 px-6 py-3 rounded-full text-lg font-bold">
+                <div class="inline-flex items-center bg-brand-100 text-brand-800 px-6 py-3 rounded-full text-lg font-bold">
                     Save up to $1,500 with Current Promotion
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <!-- CCIE Enterprise -->
-                <div class="course-card professional-card rounded-3xl p-8 relative overflow-hidden">
-                    <div class="absolute top-4 right-4 bg-accent-600 text-white px-3 py-1 rounded-full text-xs font-black">
+                <div class="course-card clean-card rounded-3xl p-8 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-black">
                         MOST POPULAR
                     </div>
                     <div class="absolute top-4 left-4 bg-danger-500 text-white px-3 py-1 rounded-full text-xs font-bold">
@@ -340,7 +342,7 @@
                     </div>
                     
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <span class="text-white text-2xl font-bold">🏆</span>
                         </div>
                         <h3 class="text-2xl font-black text-gray-900 mb-2">CCIE Enterprise</h3>
@@ -348,7 +350,7 @@
                     </div>
                     
                     <div class="text-center mb-6">
-                        <div class="text-4xl font-black text-primary-600 mb-2">$2,999</div>
+                        <div class="text-4xl font-black text-brand-600 mb-2">$2,999</div>
                         <div class="text-lg text-gray-500 line-through mb-1">Regular: $4,499</div>
                         <div class="text-lg text-success-600 font-bold">You Save: $1,500</div>
                     </div>
@@ -380,13 +382,13 @@
                         </div>
                     </div>
                     
-                    <a href="#primary-enroll" class="block w-full bg-primary-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-primary-700 transition-all animate-pulse">
+                    <a href="#brand-enroll" class="block w-full bg-brand-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-brand-700 transition-all hover:shadow-lg transition-all duration-300">
                         Start Training Now
                     </a>
                 </div>
 
                 <!-- CCIE Datacenter -->
-                <div class="course-card professional-card rounded-3xl p-8 relative">
+                <div class="course-card clean-card rounded-3xl p-8 relative">
                     <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
                         HOT TREND
                     </div>
@@ -431,13 +433,13 @@
                         </div>
                     </div>
                     
-                    <a href="#primary-enroll" class="block w-full bg-blue-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all">
+                    <a href="#brand-enroll" class="block w-full bg-blue-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all">
                         Start Training Now
                     </a>
                 </div>
 
                 <!-- CCIE Security -->
-                <div class="course-card professional-card rounded-3xl p-8 relative">
+                <div class="course-card clean-card rounded-3xl p-8 relative">
                     <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold">
                         HIGHEST PAID
                     </div>
@@ -494,14 +496,14 @@
                         </div>
                     </div>
                     
-                    <a href="#primary-enroll" class="block w-full bg-red-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all">
+                    <a href="#brand-enroll" class="block w-full bg-red-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all">
                         Start Training Now
                     </a>
                 </div>
 
 
                 <!-- DevOps -->
-                <div class="course-card professional-card rounded-3xl p-8 relative">
+                <div class="course-card clean-card rounded-3xl p-8 relative">
                     <div class="absolute top-4 right-4 bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-bold">
                         AUTOMATION
                     </div>
@@ -558,7 +560,7 @@
                         </div>
                     </div>
                     
-                    <a href="#primary-enroll" class="block w-full bg-teal-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-teal-700 transition-all">
+                    <a href="#brand-enroll" class="block w-full bg-teal-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-teal-700 transition-all">
                         Start Training Now
                     </a>
                 </div>
@@ -589,22 +591,22 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="text-center professional-card rounded-2xl p-6">
-                    <div class="text-5xl font-black text-primary-600 mb-3">95%</div>
+                <div class="text-center clean-card rounded-2xl p-6">
+                    <div class="text-5xl font-black text-brand-600 mb-3">95%</div>
                     <div class="text-xl font-bold text-gray-900 mb-2">Pass Rate</div>
                     <div class="text-gray-600">First attempt success</div>
                 </div>
-                <div class="text-center professional-card rounded-2xl p-6">
-                    <div class="text-5xl font-black text-accent-600 mb-3">$45K</div>
+                <div class="text-center clean-card rounded-2xl p-6">
+                    <div class="text-5xl font-black text-gold-600 mb-3">$45K</div>
                     <div class="text-xl font-bold text-gray-900 mb-2">Average Salary Jump</div>
                     <div class="text-gray-600">Within 6 months</div>
                 </div>
-                <div class="text-center professional-card rounded-2xl p-6">
+                <div class="text-center clean-card rounded-2xl p-6">
                     <div class="text-5xl font-black text-success-600 mb-3">10K+</div>
                     <div class="text-xl font-bold text-gray-900 mb-2">Students Trained</div>
                     <div class="text-gray-600">Since 2018</div>
                 </div>
-                <div class="text-center professional-card rounded-2xl p-6">
+                <div class="text-center clean-card rounded-2xl p-6">
                     <div class="text-5xl font-black text-purple-600 mb-3">88%</div>
                     <div class="text-xl font-bold text-gray-900 mb-2">Job Placement</div>
                     <div class="text-gray-600">Within 3 months</div>
@@ -612,7 +614,7 @@
             </div>
 
             <!-- Service Guarantee -->
-            <div class="professional-card rounded-3xl p-10">
+            <div class="clean-card rounded-3xl p-10">
                 <h3 class="text-3xl font-black text-gray-900 mb-8 text-center">Service Guarantee</h3>
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-6 text-center">
                     <div>
@@ -649,7 +651,7 @@
                     <div class="flex items-center space-x-2 mb-6">
                         <span class="text-3xl">🎯</span>
                         <span class="text-2xl font-black">CCIE</span>
-                        <span class="text-2xl font-light text-primary-400">Master</span>
+                        <span class="text-2xl font-light text-brand-400">Master</span>
                     </div>
                     <p class="text-gray-300 mb-4 text-lg">
                         Master Training • Master Results • Master Careers
@@ -657,7 +659,7 @@
                     <p class="text-gray-400">
                         Professional IT certification training with proven results and guaranteed success.
                     </p>
-                    <div class="mt-4 flex items-center space-x-1 text-accent-400">
+                    <div class="mt-4 flex items-center space-x-1 text-gold-400">
                         <span>⭐⭐⭐⭐⭐</span>
                         <span class="text-sm text-gray-400">4.9/5 (2,847 reviews)</span>
                     </div>
@@ -765,13 +767,13 @@
         // Master Story Carousel
         function updateMasterStory() {
             const story = masterStories[currentMasterStoryIndex];
-            const carousel = document.getElementById('primary-carousel');
+            const carousel = document.getElementById('brand-carousel');
             const timestamp = document.getElementById('story-timestamp');
             
             carousel.innerHTML = `
                 <div class="animate-slide-up">
                     <div class="flex items-start space-x-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-primary-600 to-accent-600 rounded-2xl flex items-center justify-center text-white font-black text-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-brand-600 to-gold-600 rounded-2xl flex items-center justify-center text-white font-black text-lg">
                             ${story.name.split(' ')[0][0]}${story.name.split(' ')[1][0]}
                         </div>
                         <div class="flex-1">
@@ -780,8 +782,8 @@
                             <div class="text-sm text-white/90 mb-4 leading-relaxed">"${story.story}"</div>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-success-500/20 text-success-300 px-3 py-1 rounded-full text-xs font-bold">${story.increase}</span>
-                                <span class="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-xs font-bold">${story.timeframe}</span>
-                                <span class="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-xs font-bold">${story.company}</span>
+                                <span class="bg-brand-500/20 text-brand-300 px-3 py-1 rounded-full text-xs font-bold">${story.timeframe}</span>
+                                <span class="bg-gold-500/20 text-gold-300 px-3 py-1 rounded-full text-xs font-bold">${story.company}</span>
                             </div>
                         </div>
                     </div>
@@ -795,10 +797,10 @@
         // Master Live Notifications
         function showMasterNotification() {
             const notification = masterNotifications[currentMasterNotificationIndex];
-            const container = document.getElementById('primary-notifications');
+            const container = document.getElementById('brand-notifications');
             
             const notificationEl = document.createElement('div');
-            notificationEl.className = 'primary-notification bg-white shadow-2xl border border-primary-200 rounded-2xl p-4 text-sm font-semibold text-gray-800 max-w-sm';
+            notificationEl.className = 'brand-notification bg-white shadow-2xl border border-brand-200 rounded-2xl p-4 text-sm font-semibold text-gray-800 max-w-sm';
             notificationEl.innerHTML = `
                 <div class="flex items-center space-x-2">
                     <div class="w-2 h-2 bg-success-500 rounded-full animate-pulse"></div>
@@ -885,7 +887,7 @@
             }
         });
 
-        document.querySelectorAll('a[href*="#primary-enroll"]').forEach(link => {
+        document.querySelectorAll('a[href*="#brand-enroll"]').forEach(link => {
             link.addEventListener('click', () => {
                 console.log('CCIE Master enrollment engagement');
             });
