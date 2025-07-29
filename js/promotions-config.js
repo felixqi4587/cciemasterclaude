@@ -20,7 +20,8 @@ window.CCIE_PROMOTIONS_CONFIG = {
         'Enterprise Infrastructure': 3999,  // CCIE EI
         'Security': 4299,                   // CCIE Lab 安全
         'Service Provider': 4499,           // CCIE SP
-        'DevNet Expert': 4799               // DevNet专家
+        'Datacenter': 4199,                 // CCIE Datacenter
+        'DevOps': 4799                      // CCIE DevOps
     },
     
     // ========================================
